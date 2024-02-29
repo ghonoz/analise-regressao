@@ -5,6 +5,7 @@ author: "Gabriel Lopes Rubinho"
 date: "27-02-2024"
 format: 
   revealjs:
+    auto-stretch: false
     #logo: "img/des.jpeg"
     width: 1600
     height: 500
@@ -79,19 +80,567 @@ $y = \beta_0 + \beta_1x_{1} + \beta_2x_{2} + ... + \beta_kx_{k} + \epsilon$
 - $Cov(\epsilon_{i};\epsilon_{i^{'}}) = E(\epsilon_{i}\epsilon_{i^{'}}) = 0$
 
 
+# Base de Dados
+
+```{r, include= FALSE}
+library(tidyverse)
+library(pdftools)
+library(lubridate)
+library(kableExtra)
+library(performance)
+library(MASS)
+arquivo <- "trabalho.pdf"
+
+#install.packages('tabulizer')
+#remotes::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"), INSTALL_opts = "--no-multiarch")
+
+# pag1 <- tabulizer::extract_tables(arquivo, pages = 1)
+# pag2 <- tabulizer::extract_tables(arquivo, pages = 2)
+# pag3 <- tabulizer::extract_tables(arquivo, pages = 3, method = 'stream')
+#                                      
+# class(pag3)
+# pag3 <- pag3[[1]]
+# pag3 <- pag3[1:6,]
+# pag3[1:6]
+# class(pag3)
+# as.tibble(pag3)
+# 
+# pag3[3,2]
+# 
+# pag3[,1]
+
+# splita_column <- function(x) {
+#   unlist(strsplit(x, " "))
+# }
+# nova <- cbind(do.call(rbind, lapply(pag3[,1], splita_column)), pag3[,-1])
+# novaa <- as.data.frame(nova)
+# 
+# index_coluna <- which(colnames(novaa) == "V8")
+# novaa <- novaa[,-index_coluna]
+# 
+# pag1 <- as.data.frame(pag1)
+# pag2 <- as.data.frame(pag2)
+# colnames(novaa) <- c('X1', 'X2', 'X3', 'X4', 'X5', 'X6', 'X7', 'X8', 'X9', 'X10')
+# colnames(pag1)
+# pag1[2,]
+# 
+# 
+# df_final <- dplyr::bind_rows(pag1, pag2, novaa)
+# df_final <- df_final[-c(1,2),]
+# df_final <- df_final[-1,]
+# 
+# colnames(df_final) <- c("id", 'nivel_educacional', 'peso', 'altura', 'idade', 'fuma', 'atividade_fisica_em_casa', 'glicose', 'colesterol', 'pressao_sanguinea_sistolica')
+df_final <- read.csv('dataframe.csv', header = TRUE)
+df_final_sem7 <- df_final[-c(6, 26, 28, 35, 43, 98, 103),]
+
+df_final$nivel_educacional <- factor(df_final$nivel_educacional)
+df_final$peso <- as.numeric(df_final$peso)
+df_final$altura <- as.numeric(df_final$altura)
+df_final$idade <- as.numeric(df_final$idade)
+df_final$fuma <- factor(df_final$fuma)
+df_final$atividade_fisica_em_casa <- factor(df_final$atividade_fisica_em_casa)
+df_final$glicose <- as.numeric(df_final$glicose)
+df_final$colesterol <- as.numeric(df_final$colesterol)
+df_final$pressao_sanguinea_sistolica <- as.numeric(df_final$pressao_sanguinea_sistolica)
+
+
+```
+
+```{r}
+knitr::kable(df_final_sem7[1:3,])
+
+```
+
+# Primeiro modelo {auto-animate="true"}
+
+$Pressão = Nível Educacional + Peso + Altura + Idade + Fuma + Atividade Física + Glicose + Colesterol$
+
+# Primeiro modelo {auto-animate="true"}
+
+$Pressão = Nível Educacional + Peso + Altura + Idade + Fuma$
+\
+$+ Atividade Física + Glicose + Colesterol$
+
+| FV | GL | SQ | QM | $F_{0}$ |
+|---------|:-----|------:|:------:|:------:|
+| Regressão      |   8 |   1683890 |   210486.2   |   534.0919   |
+| Resíduos     | 91  |  35863.2  |   394.1011  |     |
+| Total       |   99  |   1719753   |       |       |
+
+
+# Teste de significância da regressão
+
+$H_{0}: \beta_1 = \beta_2 = ... = 0$
+$H_{\alpha}: \text{Nem todos os \beta_j (j = 1, 2, ..., k) são iguais a 0}$  
+\
+\
+Pelo exercício anterior, $F_{0} = 534.0919$. Rejeitamos $H_{0}$ se 
+$F_{0} > F_{\alpha, k, n-k-1} = F_{0.05, 8, 91} = 2.041812$. Como o valor é maior que o valor crítico, rejeitamos a hipótese nula.
 
 
 
+# $R^2$ e $R_{Adj}^2$
 
-# Sobre esse tutorial....
+$R^2 = \frac{SQReg}{SQT} = \frac{1683890}{1719753}
 
-## Faremos muita prática!
+# StepWise {auto-animate="true"}
 
-![](images/livecoding.jpg){fig-align="center"}
+O algorítmo StepWise retorna o modelo
+\
+$Pressão = Idade + Aividade + Glicose + Colesterol$
+
+```{r}
+#| echo: true
+#| eval: true
+
+fitting <- lm(pressao_sanguinea_sistolica ~ nivel_educacional + peso + altura + idade + fuma + atividade_fisica_em_casa + glicose + colesterol, data = df_final)
+summary(fitting)
+```
+
+# StepWise {auto-animate="true"} 
+
+
+```{r}
+#| echo: true
+#| eval: true
+
+step <- stepAIC(fitting, direction = 'both')
+```
+
+$Pressão = Idade + Atividade + Glicose + Colesterol$
+
+# Análise do StepWise {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+modelo_candidato_final <- lm(pressao_sanguinea_sistolica ~ idade + atividade_fisica_em_casa + glicose + colesterol, data = df_final)
+summary(modelo_candidato_final)
+```
+
+
+# Análise do StepWise {auto-animate="true"}
+
+Foram-se excluídas e adicionadas algumas variáveis ao modelo, visto a significância das mesmas, e o modelo final escolhido é o 
+\ 
+$Pressão = Idade + Atividade + Glicose$ 
+
+# Diagnóstico de influência
+
+Com o modelo escolhido, podemos verificar se há possíveis outliers, pontos de alavanca, distâncias de cook, etc.
+
+
+```{r}
+influencia = influence.measures(modelo_candidato_final)
+summary(influencia)
+
+```
+
+Como há uma quatidade significativa de dados, esses pontos serão excluídos.
+
+# Diagnóstico de influência
+```{r}
+df_final_sem7 <- df_final[-c(6, 26, 28, 35, 43, 98, 103),]
+modelo_candidato_final1 <- lm(pressao_sanguinea_sistolica ~ idade + atividade_fisica_em_casa + glicose + colesterol, data = df_final_sem7)
+summary(modelo_candidato_final1)
+
+```
+
+
+# Análise mais profunda StepWise {auto-animate="true"}
+
+Após verificar combinações de variáveis, excluindo e as colocando novamente, um novo modelo foi escolhido: 
+\ 
+$Y = Idade + Atividade + Glicose$
+```{r}
+
+modelo_candidato_final2 <- lm(pressao_sanguinea_sistolica ~ idade + atividade_fisica_em_casa + glicose, data = df_final_sem7)
+summary(modelo_candidato_final2)
+```
+
+# Análise mais profunda StepWise {auto-animate="true"}
+
+Sobre a variável idade, apesar de não ser significativa, ela nos assegura de que tenhamos o pressuposto da homoscedasticidade válido. 
+```{r}
+#| echo: true
+#| eval: true
+check_heteroscedasticity(modelo_candidato_final2)	# modelo com idade
+``` 
+
+
+
+```{r}
+#| echo: false
+#| eval: true
+
+modelo_candidato_final3 <- lm(pressao_sanguinea_sistolica ~ atividade_fisica_em_casa + glicose, data = df_final_sem7)
+
+```
+
+```{r}
+#| echo: true
+#| eval: true
+check_heteroscedasticity(modelo_candidato_final3)	# modelo sem idade
+
+```
+
+*Obs*: apesar disso, se rejeita o modelo saturado no teste de anova.
+
+```{r}
+#| echo: true
+#| eval: true
+anova(modelo_candidato_final3, modelo_candidato_final2)
+
+
+```
 
 ::: footer
-Arte por [Allison Horst](https://mobile.twitter.com/allison_horst)
+   
 :::
+
+# Análise de pressupostos
+
+```{r}
+#| echo: false
+#| eval: true
+
+modelo_candidato_final2 <- lm(pressao_sanguinea_sistolica ~ idade + factor(atividade_fisica_em_casa) + glicose, data = df_final_sem7)
+
+```
+
+```{r}
+#| echo: false
+#| eval: false
+
+par(mfrow=c(2,2))
+plot(modelo_candidato_final2,which=c(1:4),pch=16,add.smooth=FALSE)
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)			# Normalidade
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+check_autocorrelation(modelo_candidato_final2)	# Autocorrelacao
+check_outliers(modelo_candidato_final2)			# Outliers
+check_collinearity(modelo_candidato_final2)		# Colinearidade
+
+```
+
+::: footer
+   
+:::
+
+# Análise de Resíduos {auto-animate="true"}
+![](fitting.png){fig-alt="Resíduos." fig-align="center" width=40%}
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+```
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_autocorrelation(modelo_candidato_final2)
+
+```
+
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_autocorrelation(modelo_candidato_final2)
+
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_outliers(modelo_candidato_final2)
+
+```
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_autocorrelation(modelo_candidato_final2)
+
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_outliers(modelo_candidato_final2)
+
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_collinearity(modelo_candidato_final2)
+```
+
+
+# Análise de Pressupostos {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_normality(modelo_candidato_final2)	
+```
+
+```{r}
+#| echo: true
+#| eval: true
+
+check_heteroscedasticity(modelo_candidato_final2)	# Heteroscedasticidade
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_autocorrelation(modelo_candidato_final2)
+
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_outliers(modelo_candidato_final2)
+
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_collinearity(modelo_candidato_final2)
+```
+
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+model_performance(modelo_candidato_final2)	
+```
+
+
+
+
+# Tentativa de transformação {auto-animate="true"}
+
+Foi-se feita uma tentativa de transformação de dados, pelo método de Box e Cox, o qual é determinado por
+
+$Y_{i} = \frac{Y^\lambda -1}{\lambda}$, se $\lambda \neq 0$
+\
+$Y_{i} = log(Y)$, se $\lambda = 0$
+
+# Tentativa de transformação {auto-animate="true"}
+
+```{r}
+#| echo: true
+#| eval: true
+par(mfrow = c(1, 2))
+a = boxcox(pressao_sanguinea_sistolica ~ idade, data=df_final_sem7, plotit=T)
+w = boxcox(pressao_sanguinea_sistolica ~ glicose, data=df_final_sem7, plotit=T)
+```
+
+# Tentativa de transformação {auto-animate="true"}
+Após análises, o modelo de combinação cujo teve o maior R$^2$ foi o qual o logaritmo é aplicado nas duas variáveis. No entanto, mesmo com a transformação, o pressuposto de normalidade de resíduos continua falhando. 
+
+
+```{r}
+
+#| echo: false
+#| eval: true
+#| 
+df_final_sem7$log_idade <- log(df_final_sem7$idade)
+df_final_sem7$log_glicose <- log(df_final_sem7$glicose)
+
+```
+
+```{r}
+
+#| echo: true
+#| eval: true
+#| 
+
+modelo_final_logIdadeGlicose <- lm(pressao_sanguinea_sistolica ~ log_glicose + log_idade + atividade_fisica_em_casa, data = df_final_sem7)
+summary(modelo_final_logIdadeGlicose)
+
+df_final_sem7 <- df_final_sem7[, -c(ncol(df_final_sem7), ncol(df_final_sem7)-1)]
+
+
+```
+# Tentativa de transformação {auto-animate="true"}
+
+```{r}
+
+#| echo: true
+#| eval: true
+
+check_normality(modelo_final_logIdadeGlicose)
+
+```
+
+
+# Efeitos Diretos 
+
+```{r}
+
+df_final_sem7_variaveis <- df_final_sem7[, -c(1:4,6,9)]
+df_final_sem7_variaveis <- df_final_sem7_variaveis[, -c(2)]
+Dp = apply(df_final_sem7_variaveis, 2, function(x) (x-mean(x))/sd(x) )
+Dp = data.frame(Dp)
+
+mod2 <- lm(pressao_sanguinea_sistolica ~ ., data = Dp)
+
+ED = round(coef(mod2),4)[2:4]; ED
+
+
+```
+
+# Teste de Hipótese - I
+
+$H_{0}: \beta_1 = \beta_2 = \beta_3$
+\
+$H_{\alpha}: \text{pelo menos um } \beta_j \text{ (j = 1, 2) difere de 0}$
+
+
+```{r}
+
+summary(modelo_candidato_final2)
+
+```
+
+# Teste de Hipótese - II {auto-animate="true"}
+
+
+$H_{0}: \beta_j = 0$ 
+
+\ 
+
+$H_{\alpha}: \beta_j \neq 0 (j = 0, 1, 2,...)$
+
+# Teste de Hipótese - II {auto-animate="true"}
+Pelo teste t$^{*}$ parcial
+
+```{r}
+summary(modelo_candidato_final2)
+```
+
+# Teste de Hipótese - II {auto-animate="true"}
+Pelo teste F$^{*}$ parcial
+
+```{r}
+anova(modelo_candidato_final2)
+
+```
+
+
+
+
+
+
+
+
 
 ## Tem novidades surgindo com frequência!
 
