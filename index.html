@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="pt"><head>
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
 <script src="index_files/libs/quarto-html/tabby.min.js"></script>
 <script src="index_files/libs/quarto-html/popper.min.js"></script>
@@ -11,7 +11,6 @@
   <meta name="generator" content="quarto-1.5.3">
 
   <meta name="author" content="Gabriel Lopes Rubinho">
-  <meta name="dcterms.date" content="2026-03-02">
   <title>Trabalho de Regressão Linear</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -393,7 +392,7 @@
 
 <section class="quarto-title-block center">
   <h1 class="title">Trabalho de Regressão Linear</h1>
-  <p class="subtitle">Nome do arquivo</p>
+  <p class="subtitle">Doenças Cardiovasculares em Honolulu</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -403,7 +402,6 @@ Gabriel Lopes Rubinho
 </div>
 </div>
 
-  <p class="date">2026-03-02</p>
 </section>
 <section class="slide level2">
 
@@ -423,78 +421,10 @@ Gabriel Lopes Rubinho
 <!-- ::: -->
 <!-- ::: -->
 </section>
+<section>
 <section class="title-slide slide level1 center">
 <h1>Introdução</h1>
 
-</section>
-
-<section class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Base de dados</h1>
-<p>A base de dados tem as variáveis …</p>
-</section>
-
-<section>
-<section class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Base de dados</h1>
-<div class="cell">
-<div class="cell-output-display">
-<table>
-<thead>
-<tr class="header">
-<th style="text-align: right;">Sepal.Length</th>
-<th style="text-align: right;">Sepal.Width</th>
-<th style="text-align: right;">Petal.Length</th>
-<th style="text-align: right;">Petal.Width</th>
-<th style="text-align: left;">Species</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: right;">5.1</td>
-<td style="text-align: right;">3.5</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4.9</td>
-<td style="text-align: right;">3.0</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">4.7</td>
-<td style="text-align: right;">3.2</td>
-<td style="text-align: right;">1.3</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">4.6</td>
-<td style="text-align: right;">3.1</td>
-<td style="text-align: right;">1.5</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-<tr class="odd">
-<td style="text-align: right;">5.0</td>
-<td style="text-align: right;">3.6</td>
-<td style="text-align: right;">1.4</td>
-<td style="text-align: right;">0.2</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-<tr class="even">
-<td style="text-align: right;">5.4</td>
-<td style="text-align: right;">3.9</td>
-<td style="text-align: right;">1.7</td>
-<td style="text-align: right;">0.4</td>
-<td style="text-align: left;">setosa</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
 </section>
 <section class="slide level2" data-auto-animate="true">
 <h2 data-id="quarto-animate-title">Modelo de Regressão Linear Múltipla</h2>
@@ -579,11 +509,6 @@ Gabriel Lopes Rubinho
 
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Primeiro modelo</h1>
-<p><span class="math inline">\(Pressão = Nível Educacional + Peso + Altura + Idade + Fuma + Atividade Física + Glicose + Colesterol\)</span></p>
-</section>
-
-<section class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Primeiro modelo</h1>
 <p><span class="math inline">\(Pressão = Nível Educacional + Peso + Altura + Idade + Fuma\)</span><br>
 <span class="math inline">\(+ Atividade Física + Glicose + Colesterol\)</span></p>
 <table>
@@ -600,9 +525,9 @@ Gabriel Lopes Rubinho
 <tr class="odd">
 <td>Regressão</td>
 <td style="text-align: left;">8</td>
-<td style="text-align: right;">1683890</td>
-<td style="text-align: center;">210486.2</td>
-<td style="text-align: center;">534.0919</td>
+<td style="text-align: right;">8659.801</td>
+<td style="text-align: center;">1082.475</td>
+<td style="text-align: center;">2.746694</td>
 </tr>
 <tr class="even">
 <td>Resíduos</td>
@@ -614,7 +539,7 @@ Gabriel Lopes Rubinho
 <tr class="odd">
 <td>Total</td>
 <td style="text-align: left;">99</td>
-<td style="text-align: right;">1719753</td>
+<td style="text-align: right;">44523</td>
 <td style="text-align: center;"></td>
 <td style="text-align: center;"></td>
 </tr>
@@ -624,24 +549,22 @@ Gabriel Lopes Rubinho
 
 <section class="title-slide slide level1 center">
 <h1>Teste de significância da regressão</h1>
-<p><span class="math inline">\(H_{0}: \beta_1 = \beta_2 = ... = 0\)</span> <span class="math inline">\(H_{\alpha}: \text{Nem todos os \beta_j (j = 1, 2, ..., k) são iguais a 0}\)</span><br>
+<p><span class="math inline">\(H_{0}: \beta_1 = \beta_2 = ... = 0\)</span> <span class="math inline">\(H_{\alpha}: \text{Nem todos os } \beta_j \text{ (j = 1, 2, ..., k) são iguais a 0}\)</span><br>
 <br>
 <br>
-Pelo exercício anterior, <span class="math inline">\(F_{0} = 534.0919\)</span>. Rejeitamos <span class="math inline">\(H_{0}\)</span> se <span class="math inline">\(F_{0} &gt; F_{\alpha, k, n-k-1} = F_{0.05, 8, 91} = 2.041812\)</span>. Como o valor é maior que o valor crítico, rejeitamos a hipótese nula.</p>
+Pelo exercício anterior, <span class="math inline">\(F_{0} = 2.746694\)</span>. Rejeitamos <span class="math inline">\(H_{0}\)</span> se <span class="math inline">\(F_{0} &gt; F_{\alpha, k, n-k-1} = F_{0.05, 8, 91} = 2.041812\)</span>. Como o valor é maior que o valor crítico, rejeitamos a hipótese nula.</p>
 </section>
 
 <section class="title-slide slide level1 center">
 <h1><span class="math inline">\(R^2\)</span> e <span class="math inline">\(R_{Adj}^2\)</span></h1>
-<p>$R^2 = = </p>
+<p><span class="math inline">\(R^2 = \frac{SQReg}{SQT} = \frac{8659.801}{8659.801} = 0.1945\)</span></p>
 </section>
 
-<section class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">StepWise</h1>
-<p>O algorítmo StepWise retorna o modelo<br>
-<span class="math inline">\(Pressão = Idade + Aividade + Glicose + Colesterol\)</span></p>
+<section class="title-slide slide level1 center">
+<h1>Sumário do modelo</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href=""></a>fitting <span class="ot">&lt;-</span> <span class="fu">lm</span>(pressao_sanguinea_sistolica <span class="sc">~</span> nivel_educacional <span class="sc">+</span> peso <span class="sc">+</span> altura <span class="sc">+</span> idade <span class="sc">+</span> fuma <span class="sc">+</span> atividade_fisica_em_casa <span class="sc">+</span> glicose <span class="sc">+</span> colesterol, <span class="at">data =</span> df_final)</span>
-<span id="cb1-2" class="hljs-ln-code"><a href=""></a><span class="fu">summary</span>(fitting)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>fitting <span class="ot">&lt;-</span> <span class="fu">lm</span>(pressao_sanguinea_sistolica <span class="sc">~</span> nivel_educacional <span class="sc">+</span> peso <span class="sc">+</span> altura <span class="sc">+</span> idade <span class="sc">+</span> fuma <span class="sc">+</span> atividade_fisica_em_casa <span class="sc">+</span> glicose <span class="sc">+</span> colesterol, <span class="at">data =</span> df_final)</span>
+<span id="cb1-2"><a href=""></a><span class="fu">summary</span>(fitting)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -678,9 +601,41 @@ F-statistic: 1.932 on 11 and 88 DF,  p-value: 0.04564</code></pre>
 </section>
 
 <section class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Multiolinearidade</h1>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="grafico.png" class="quarto-figure quarto-figure-center" style="width:50.0%" alt="Boxplot"></p>
+</figure>
+</div>
+</section>
+
+<section class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Multiolinearidade</h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                             GVIF Df GVIF^(1/(2*Df))
+nivel_educacional        1.456429  4        1.048120
+peso                     1.292772  1        1.137001
+altura                   1.493340  1        1.222023
+idade                    1.184124  1        1.088175
+fuma                     1.168883  1        1.081149
+atividade_fisica_em_casa 1.070123  1        1.034467
+glicose                  1.202198  1        1.096448
+colesterol               1.305174  1        1.142442</code></pre>
+</div>
+</div>
+</section>
+
+<section class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">StepWise</h1>
+<p>O algorítmo StepWise retorna o modelo<br>
+<span class="math inline">\(Pressão = Idade + Aividade + Glicose + Colesterol\)</span></p>
+</section>
+
+<section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">StepWise</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href=""></a>step <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(fitting, <span class="at">direction =</span> <span class="st">'both'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href=""></a>step <span class="ot">&lt;-</span> <span class="fu">stepAIC</span>(fitting, <span class="at">direction =</span> <span class="st">'both'</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Start:  AIC=612.23
 pressao_sanguinea_sistolica ~ nivel_educacional + peso + altura + 
@@ -764,8 +719,8 @@ pressao_sanguinea_sistolica ~ idade + atividade_fisica_em_casa +
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise do StepWise</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href=""></a>modelo_candidato_final <span class="ot">&lt;-</span> <span class="fu">lm</span>(pressao_sanguinea_sistolica <span class="sc">~</span> idade <span class="sc">+</span> atividade_fisica_em_casa <span class="sc">+</span> glicose <span class="sc">+</span> colesterol, <span class="at">data =</span> df_final)</span>
-<span id="cb5-2" class="hljs-ln-code"><a href=""></a><span class="fu">summary</span>(modelo_candidato_final)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a href=""></a>modelo_candidato_final <span class="ot">&lt;-</span> <span class="fu">lm</span>(pressao_sanguinea_sistolica <span class="sc">~</span> idade <span class="sc">+</span> atividade_fisica_em_casa <span class="sc">+</span> glicose <span class="sc">+</span> colesterol, <span class="at">data =</span> df_final)</span>
+<span id="cb6-2" class="hljs-ln-code"><a href=""></a><span class="fu">summary</span>(modelo_candidato_final)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
 Call:
@@ -791,11 +746,6 @@ Multiple R-squared:  0.1516,    Adjusted R-squared:  0.1159
 F-statistic: 4.244 on 4 and 95 DF,  p-value: 0.003329</code></pre>
 </div>
 </div>
-</section>
-
-<section class="title-slide slide level1 center" data-auto-animate="true">
-<h1 data-id="quarto-animate-title">Análise do StepWise</h1>
-<p>Foram-se excluídas e adicionadas algumas variáveis ao modelo, visto a significância das mesmas, e o modelo final escolhido é o &nbsp; <span class="math inline">\(Pressão = Idade + Atividade + Glicose\)</span></p>
 </section>
 
 <section class="title-slide slide level1 center">
@@ -851,7 +801,7 @@ F-statistic: 4.178 on 4 and 89 DF,  p-value: 0.003795</code></pre>
 
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise mais profunda StepWise</h1>
-<p>Após verificar combinações de variáveis, excluindo e as colocando novamente, um novo modelo foi escolhido: &nbsp; <span class="math inline">\(Y = Idade + Atividade + Glicose\)</span></p>
+<p>Após verificar combinações de variáveis, excluindo e as colocando novamente, um novo modelo foi escolhido: &nbsp; <span class="math inline">\(Pressão = Idade + Atividade + Glicose\)</span></p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -883,20 +833,20 @@ F-statistic: 4.991 on 3 and 90 DF,  p-value: 0.003007</code></pre>
 <h1 data-id="quarto-animate-title">Análise mais profunda StepWise</h1>
 <p>Sobre a variável idade, apesar de não ser significativa, ela nos assegura de que tenhamos o pressuposto da homoscedasticidade válido.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># modelo com idade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># modelo com idade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final3)   <span class="co"># modelo sem idade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final3)   <span class="co"># modelo sem idade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Heteroscedasticity (non-constant error variance) detected (p = 0.016).</code></pre>
 </div>
 </div>
 <p><em>Obs</em>: apesar disso, se rejeita o modelo saturado no teste de anova.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href=""></a><span class="fu">anova</span>(modelo_candidato_final3, modelo_candidato_final2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href=""></a><span class="fu">anova</span>(modelo_candidato_final3, modelo_candidato_final2)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Analysis of Variance Table
 
@@ -925,7 +875,7 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
-<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.616).</code></pre>
+<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.612).</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: No outliers detected.
@@ -964,7 +914,7 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb21-1" class="hljs-ln-code"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb22-1" class="hljs-ln-code"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
@@ -974,13 +924,13 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
@@ -990,20 +940,20 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.578).</code></pre>
+<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.632).</code></pre>
 </div>
 </div>
 </section>
@@ -1011,20 +961,20 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.584).</code></pre>
+<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.632).</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1039,20 +989,20 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.622).</code></pre>
+<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.556).</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1083,20 +1033,20 @@ Low Correlation
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Análise de Pressupostos</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href=""></a><span class="fu">check_normality</span>(modelo_candidato_final2)    </span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Warning: Non-normality of residuals detected (p = 0.016).</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href=""></a><span class="fu">check_heteroscedasticity</span>(modelo_candidato_final2)   <span class="co"># Heteroscedasticidade</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>OK: Error variance appears to be homoscedastic (p = 0.059).</code></pre>
 </div>
 </div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.596).</code></pre>
+<pre><code>OK: Residuals appear to be independent and not autocorrelated (p = 0.566).</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -1143,9 +1093,9 @@ AIC     |    AICc |     BIC |    R2 | R2 (adj.) |   RMSE |  Sigma
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Tentativa de transformação</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb53-1" class="hljs-ln-code"><a href=""></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
-<span id="cb53-2" class="hljs-ln-code"><a href=""></a>a <span class="ot">=</span> <span class="fu">boxcox</span>(pressao_sanguinea_sistolica <span class="sc">~</span> idade, <span class="at">data=</span>df_final_sem7, <span class="at">plotit=</span>T)</span>
-<span id="cb53-3" class="hljs-ln-code"><a href=""></a>w <span class="ot">=</span> <span class="fu">boxcox</span>(pressao_sanguinea_sistolica <span class="sc">~</span> glicose, <span class="at">data=</span>df_final_sem7, <span class="at">plotit=</span>T)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb54-1" class="hljs-ln-code"><a href=""></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>))</span>
+<span id="cb54-2" class="hljs-ln-code"><a href=""></a>a <span class="ot">=</span> <span class="fu">boxcox</span>(pressao_sanguinea_sistolica <span class="sc">~</span> idade, <span class="at">data=</span>df_final_sem7, <span class="at">plotit=</span>T)</span>
+<span id="cb54-3" class="hljs-ln-code"><a href=""></a>w <span class="ot">=</span> <span class="fu">boxcox</span>(pressao_sanguinea_sistolica <span class="sc">~</span> glicose, <span class="at">data=</span>df_final_sem7, <span class="at">plotit=</span>T)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -1273,7 +1223,6 @@ F-statistic: 4.991 on 3 and 90 DF,  p-value: 0.003007</code></pre>
 </div>
 </section>
 
-<section>
 <section class="title-slide slide level1 center" data-auto-animate="true">
 <h1 data-id="quarto-animate-title">Teste de Hipótese - II</h1>
 <p>Pelo teste F<span class="math inline">\(^{*}\)</span> parcial</p>
@@ -1292,402 +1241,172 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
 </div>
 </div>
 </section>
-<section class="slide level2">
-<h2>Tem novidades surgindo com frequência!</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/something-new.jpg" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<div class="footer">
-<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a></p>
-</div>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>O que é o Quarto?</h1>
 
-</section>
-<section class="slide level2">
-<h2>Seria o Quarto…</h2>
-<div class="r-stack">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/paste-614B8F2C.png" class="fragment quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-<p><img data-src="images/paste-23FE8FE7.png" class="fragment absolute" style="top: 15%; left: 40%; width: 400px; height: 400px; "></p>
-</div>
-</section>
-<section class="slide level2">
-<h2>O que é o Quarto?</h2>
-<ul>
-<li>O Quarto é um sistema de escrita técnica e científica, de código aberto.</li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/quarto_schematic.png" class="quarto-figure quarto-figure-center" data-out.width="50%"></p>
-<figcaption>A schematic representing the multi-language input (e.g.&nbsp;Python, R, Observable, Julia) and multi-format output (e.g.&nbsp;PDF, html, Word documents, and more) versatility of Quarto</figcaption>
-</figure>
-</div>
-<div class="footer">
-<p>Arte por <a href="https://mobile.twitter.com/allison_horst">Allison Horst</a>.</p>
-</div>
-</section>
-<section class="slide level2">
-<h2>Por que o Quarto existe?</h2>
-<ul>
-<li><p><strong>O Quarto é a nova geração do R Markdown!</strong></p></li>
-<li><p>O rmarkdown é um pacote em R. Para usá-lo, é necessário ter o R instalado (mesmo que o seu arquivo não tenha conteúdos em R).</p></li>
-<li><p>O R Markdown é uma ferramenta muito boa para escrita técnica e científica reprodutível, possibilitando criar vários tipos de documentos. Porém, <strong>o seu uso acaba ficando limitado às pessoas que usam R</strong>.</p></li>
-<li><p><strong>O Quarto é um software novo, que não depende do R</strong>!</p></li>
-</ul>
-<aside class="notes">
-<ul>
-<li>Por exemplo: Você pode usar o VSCode como IDE, escrever um documento com código em Python e gerar o documento final. Tudo isso sem precisar ter o R e/ou RStudio instalados.</li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-<h2>Quais são as similaridades?</h2>
-<ul>
-<li><p>A estrutura do arquivo é muito similar! Para muitos arquivos, há compatibilidade (bastando alterar a extensão de <code>.Rmd</code> para <code>.qmd</code>).</p></li>
-<li><p>Podemos adicionar código em R, Python, Julia, etc etc.</p></li>
-<li><p>Podemos criar diversos tipos de arquivos, como: páginas da internet (arquivos <code>.html</code>), PDFs, <code>.docx</code>, apresentações, documentos interativos, livros, e mais está sendo produzido :)</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Como começar a usar o quarto</h2>
-<p><a href="https://quarto.org/docs/get-started/">Instalar o Quarto:</a></p>
-<p><br></p>
-<center>
-<a href="https://quarto.org/docs/get-started/"> <img data-src="images/install-quarto.png" class="quarto-figure quarto-figure-center" style="width: 80%; !important" alt="Print screen da página de instalação do Quarto"> </a>
-</center>
-</section></section>
-<section>
 <section class="title-slide slide level1 center">
-<h1>Como criar um documento simples?</h1>
+<h1>Correlações Parciais</h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>$estimate
+                                idade   glicose pressao_sanguinea_sistolica
+idade                       1.0000000 0.1681940                   0.1643345
+glicose                     0.1681940 1.0000000                   0.2296518
+pressao_sanguinea_sistolica 0.1643345 0.2296518                   1.0000000
 
+$p.value
+                                idade    glicose pressao_sanguinea_sistolica
+idade                       0.0000000 0.10705547                  0.11547072
+glicose                     0.1070555 0.00000000                  0.02680027
+pressao_sanguinea_sistolica 0.1154707 0.02680027                  0.00000000
+
+$statistic
+                               idade  glicose pressao_sanguinea_sistolica
+idade                       0.000000 1.627656                    1.589258
+glicose                     1.627656 0.000000                    2.250898
+pressao_sanguinea_sistolica 1.589258 2.250898                    0.000000
+
+$n
+[1] 94
+
+$gp
+[1] 1
+
+$method
+[1] "pearson"</code></pre>
+</div>
+</div>
 </section>
-<section class="slide level2">
-<h2>Vamos usar o Quarto na RStudio Cloud!</h2>
-<ul>
-<li><p><a href="https://rstudio.cloud/content/4688214" class="uri">https://rstudio.cloud/content/4688214</a></p></li>
-<li><p>Similar ao RStudio IDE</p></li>
-<li><p>O quarto já vem instalado!</p></li>
-</ul>
+
+<section class="title-slide slide level1 center">
+<h1>Correlações Simples</h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>                                idade   glicose pressao_sanguinea_sistolica
+idade                       1.0000000 0.2145051                   0.2115478
+glicose                     0.2145051 1.0000000                   0.2646076
+pressao_sanguinea_sistolica 0.2115478 0.2646076                   1.0000000</code></pre>
+</div>
+</div>
 </section>
-<section class="slide level2">
-<h2>Engines</h2>
-<ul>
-<li>Ao criar um novo arquivo com Quarto, podemos escolher entre duas <em>engines</em>: knitr ou jupyter.</li>
-</ul>
-<h3>Com knitr</h3>
-<p>Caso não tenha o pacote rmarkdown instalado, execute no console:</p>
-<div class="sourceCode" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href=""></a><span class="fu">install.packages</span>(<span class="st">"rmarkdown"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p><br></p>
-<h3>Com jupyter</h3>
-<p>Caso não tenha o jupyter instalado, execute no terminal:</p>
-<pre><code>python3 -m pip install jupyter</code></pre>
+
+<section class="title-slide slide level1 center">
+<h1>Estimativa para <span class="math inline">\(\sigma^2\)</span></h1>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = pressao_sanguinea_sistolica ~ idade + factor(atividade_fisica_em_casa) + 
+    glicose, data = df_final_sem7)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-41.748 -13.022  -2.691  10.223  67.379 
+
+Coefficients:
+                                  Estimate Std. Error t value Pr(&gt;|t|)    
+(Intercept)                       83.28343   21.30716   3.909  0.00018 ***
+idade                              0.72054    0.40544   1.777  0.07892 .  
+factor(atividade_fisica_em_casa)2 -9.12184    4.08473  -2.233  0.02802 *  
+glicose                            0.08860    0.03829   2.314  0.02294 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 19.73 on 90 degrees of freedom
+Multiple R-squared:  0.1426,    Adjusted R-squared:  0.1141 
+F-statistic: 4.991 on 3 and 90 DF,  p-value: 0.003007</code></pre>
+</div>
+</div>
+<p><span class="math inline">\(\hat{\sigma}^2 = 19.73\)</span></p>
 </section>
-<section class="slide level2">
-<h2>Criar novo arquivo: New file</h2>
-<center>
-<img data-src="images/rstudio-newfile.png" class="quarto-figure quarto-figure-center" style="width: 90%; !important" alt="Print screen da IDE RStudio">
-</center>
-</section>
-<section class="slide level2">
-<h2>Renderizar o arquivo: Render file</h2>
-<center>
-<img data-src="images/rstudio-cloud-2.png" class="quarto-figure quarto-figure-center" style="width: 90%; !important" alt="Print screen da IDE RStudio Cloud">
-</center>
-</section>
-<section class="slide level2">
-<h2>Visual Editor</h2>
-<div class="columns">
-<div class="column" style="width:45%;">
-<ul>
-<li>As versões mais recentes do RStudio permitem usar o Visual Editor.</li>
-</ul>
-<p>Leitura indicada:</p>
-<ul>
-<li><a href="https://www.rstudio.com/blog/exploring-rstudio-visual-markdown-editor/">Exploring RStudio’s Visual Markdown Editor</a></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center">
+
+<section class="title-slide slide level1 center">
+<h1>Valores estimados</h1>
+<div class="cell">
 <div class="cell-output-display">
+<table data-quarto-postprocess="true">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th"></th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">y</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">y_predict</th>
+<th style="text-align: right;" data-quarto-table-cell-role="th">residuals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">136.7163</td>
+<td style="text-align: right;">-34.716258</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">138</td>
+<td style="text-align: right;">124.4763</td>
+<td style="text-align: right;">13.523708</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">3</td>
+<td style="text-align: right;">190</td>
+<td style="text-align: right;">141.7491</td>
+<td style="text-align: right;">48.250855</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">4</td>
+<td style="text-align: right;">122</td>
+<td style="text-align: right;">128.0933</td>
+<td style="text-align: right;">-6.093306</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">5</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">136.4215</td>
+<td style="text-align: right;">-8.421513</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: right;">128</td>
+<td style="text-align: right;">142.9181</td>
+<td style="text-align: right;">-14.918114</td>
+</tr>
+</tbody>
+</table>
+
+
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.892265e-12</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Shapiro-Wilk normality test
+
+data:  df_final$residuals
+W = 0.96581, p-value = 0.01462</code></pre>
+</div>
+</div>
+<div class="footer">
+
+</div>
+</section>
+
+<section class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Gráficos finais</h1>
+<p>Não se é possível obter um gráfico conjunto das 3 variáveis. Portanto, será feito um boxplot comparando elas parte por parte.</p>
+</section>
+
+<section class="title-slide slide level1 center" data-auto-animate="true">
+<h1 data-id="quarto-animate-title">Gráficos finais</h1>
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://www.rstudio.com/blog/rstudio-v1-4-preview-visual-markdown-editing/images/visual-editing.png" class="quarto-figure quarto-figure-center" style="width:90.0%"></p>
-<figcaption>Fonte: RStudio</figcaption>
+<p><img data-src="boxplot_tenta.png" class="quarto-figure quarto-figure-center" style="width:40.0%" alt="Boxplot"></p>
 </figure>
 </div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como criar uma apresentação?</h1>
-
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb62-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb62-2" class="hljs-ln-code"><a href=""></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb62-3" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span> html</span>
-<span id="cb62-4" class="hljs-ln-code"><a href=""></a>editor<span class="sc">:</span> visual</span>
-<span id="cb62-5" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Altere o cabeçalho do arquivo</h2>
-<div class="sourceCode" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb63-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb63-2" class="hljs-ln-code"><a href=""></a>title<span class="sc">:</span> <span class="st">"Título"</span></span>
-<span id="cb63-3" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span> revealjs</span>
-<span id="cb63-4" class="hljs-ln-code"><a href=""></a>editor<span class="sc">:</span> visual</span>
-<span id="cb63-5" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li><p>Os slides são separados considerando os títulos e subtítulos: <code>#</code> e <code>##</code>.</p></li>
-<li><p>Use <code>#</code> para criar uma nova seção.</p></li>
-<li><p>Use <code>##</code> para criar um novo slide.</p></li>
-</ul>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como compartilhar a apresentação?</h1>
-
-</section>
-<section class="slide level2">
-<h2>Algumas formas…</h2>
-<ul>
-<li><p>GitHub Pages</p></li>
-<li><p>Netlify</p></li>
-<li><p><strong>QuartoPub</strong></p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Primeiros passos usando Quarto na linha de comando</h2>
-<ul>
-<li><p>O Quarto é um CLI: Command Line Interface - Interface de linha de comando.</p></li>
-<li><p>Podemos usar o Quarto no terminal.</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb64"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb64-1"><a href=""></a><span class="ex">/cloud/project$</span> quarto help</span>
-<span id="cb64-2"><a href=""></a></span>
-<span id="cb64-3"><a href=""></a>  <span class="ex">Usage:</span>   quarto </span>
-<span id="cb64-4"><a href=""></a>  <span class="ex">Version:</span> 1.1.251</span>
-<span id="cb64-5"><a href=""></a>                  </span>
-<span id="cb64-6"><a href=""></a></span>
-<span id="cb64-7"><a href=""></a>  <span class="ex">Description:</span></span>
-<span id="cb64-8"><a href=""></a></span>
-<span id="cb64-9"><a href=""></a>    <span class="ex">Quarto</span> CLI</span>
-<span id="cb64-10"><a href=""></a></span>
-<span id="cb64-11"><a href=""></a>  <span class="ex">Options:</span></span>
-<span id="cb64-12"><a href=""></a></span>
-<span id="cb64-13"><a href=""></a>    <span class="ex">-h,</span> <span class="at">--help</span>     <span class="at">-</span> Show this help.                            </span>
-<span id="cb64-14"><a href=""></a>    <span class="ex">-V,</span> <span class="at">--version</span>  <span class="at">-</span> Show the version number for this program.  </span>
-<span id="cb64-15"><a href=""></a></span>
-<span id="cb64-16"><a href=""></a>  <span class="ex">Commands:</span></span>
-<span id="cb64-17"><a href=""></a></span>
-<span id="cb64-18"><a href=""></a>    <span class="ex">render</span>          <span class="pp">[</span><span class="ss">input</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>   <span class="at">-</span> Render input file<span class="er">(</span><span class="ex">s</span><span class="kw">)</span> <span class="ex">to</span> various document types.            </span>
-<span id="cb64-19"><a href=""></a>    <span class="ex">preview</span>         <span class="pp">[</span><span class="ss">file</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>    <span class="at">-</span> Render and preview a document or website project.          </span>
-<span id="cb64-20"><a href=""></a>    <span class="ex">serve</span>           <span class="pp">[</span><span class="ss">input</span><span class="pp">]</span>             <span class="at">-</span> Serve a Shiny interactive document.                        </span>
-<span id="cb64-21"><a href=""></a>    <span class="ex">create-project</span>  <span class="pp">[</span><span class="ss">dir</span><span class="pp">]</span>               <span class="at">-</span> Create a project for rendering multiple documents          </span>
-<span id="cb64-22"><a href=""></a>    <span class="ex">convert</span>         <span class="op">&lt;</span>input<span class="op">&gt;</span>             - Convert documents to alternate representations.            </span>
-<span id="cb64-23"><a href=""></a>    <span class="ex">pandoc</span>          <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>           <span class="at">-</span> Run the version of Pandoc embedded within Quarto.          </span>
-<span id="cb64-24"><a href=""></a>    <span class="ex">run</span>             <span class="pp">[</span><span class="ss">script</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">args...</span><span class="pp">]</span>  <span class="at">-</span> Run a TypeScript, R, Python, or Lua script.                </span>
-<span id="cb64-25"><a href=""></a>    <span class="fu">install</span>         <span class="op">&lt;</span>type<span class="op">&gt;</span> <span class="pp">[</span><span class="ss">target</span><span class="pp">]</span>     <span class="at">-</span> Installs an extension or global dependency.                </span>
-<span id="cb64-26"><a href=""></a>    <span class="ex">publish</span>         <span class="pp">[</span><span class="ss">provider</span><span class="pp">]</span> <span class="pp">[</span><span class="ss">path</span><span class="pp">]</span>   <span class="at">-</span> Publish a document or project. Available providers include:</span>
-<span id="cb64-27"><a href=""></a>    <span class="ex">check</span>           <span class="pp">[</span><span class="ss">target</span><span class="pp">]</span>            <span class="at">-</span> Verify correct functioning of Quarto installation.         </span>
-<span id="cb64-28"><a href=""></a>    <span class="bu">help</span>            <span class="pp">[</span><span class="ss">command</span><span class="pp">]</span>           <span class="at">-</span> Show this help or the help of a sub-command.               </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-<h2>QuartoPub</h2>
-<ul>
-<li><p>Vamos disponibilizar nossa apresentação no QuartoPub: <a href="https://quartopub.com/" class="uri">https://quartopub.com/</a></p></li>
-<li><p>No terminal, usar o comando <code>quarto publish quarto-pub nome-do-arquivo.qmd</code> e seguir o passo a passo (no slide seguinte temos um exemplo).</p></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2></h2>
-<div class="sourceCode" id="cb65"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb65-1"><a href=""></a><span class="ex">/cloud/project$</span> quarto publish quarto-pub index.qmd</span>
-<span id="cb65-2"><a href=""></a><span class="ex">?</span> Provider: › Quarto Pub</span>
-<span id="cb65-3"><a href=""></a><span class="ex">?</span> Authorize <span class="er">(</span><span class="ex">Y/n</span><span class="kw">)</span> <span class="ex">›</span> Yes</span>
-<span id="cb65-4"><a href=""></a><span class="ex">Please</span> authorize by opening this url: https://quartopub.com/authorize<span class="pp">?</span>id=......</span>
-<span id="cb65-5"><a href=""></a><span class="ex">?</span> Document name: › Use another name...</span>
-<span id="cb65-6"><a href=""></a><span class="ex">?</span> Publish with name: › nome-da-apresentacao</span>
-<span id="cb65-7"><a href=""></a></span>
-<span id="cb65-8"><a href=""></a><span class="ex">[✓]</span> Creating quarto-pub document</span>
-<span id="cb65-9"><a href=""></a><span class="ex">[✓]</span> Preparing to publish document</span>
-<span id="cb65-10"><a href=""></a><span class="ex">[✓]</span> Uploading files <span class="er">(</span><span class="bu">complete</span><span class="kw">)</span></span>
-<span id="cb65-11"><a href=""></a><span class="ex">[✓]</span> Deploying published document</span>
-<span id="cb65-12"><a href=""></a><span class="ex">[✓]</span> Published document: https://quartopub.com/sites/nome-usuario/nome-da-apresentacao</span>
-<span id="cb65-13"><a href=""></a><span class="ex">[✓]</span> Account site updated: https://nome-usuario.quarto.pub</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>Como alterar o estilo da apresentação?</h1>
-
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Usando temas</h2>
-<ul>
-<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
-</ul>
-<div class="sourceCode" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb66-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb66-2" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span> revealjs</span>
-<span id="cb66-3" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Usando temas</h2>
-<ul>
-<li>Existem alguns <a href="https://quarto.org/docs/presentations/revealjs/themes.html">temas</a> disponíveis para usar:</li>
-</ul>
-<div class="sourceCode" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb67-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb67-2" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span></span>
-<span id="cb67-3" class="hljs-ln-code"><a href=""></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb67-4" class="hljs-ln-code"><a href=""></a>    theme<span class="sc">:</span> moon</span>
-<span id="cb67-5" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2">
-<h2>Temas disponíveis</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>beige</p></li>
-<li><p>blood</p></li>
-<li><p>dark</p></li>
-<li><p>league</p></li>
-<li><p>moon</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<ul>
-<li><p>night</p></li>
-<li><p>serif</p></li>
-<li><p>simple</p></li>
-<li><p>sky</p></li>
-<li><p>solarized</p></li>
-</ul>
-</div>
-</div>
-<p>Tema padrão: <strong>default</strong></p>
-<div class="footer">
-<p>Fonte: <a href="https://quarto.org/docs/presentations/revealjs/themes.html">Documentação do Quarto</a></p>
-</div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
-<div class="sourceCode" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb68-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb68-2" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span></span>
-<span id="cb68-3" class="hljs-ln-code"><a href=""></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb68-4" class="hljs-ln-code"><a href=""></a>    theme<span class="sc">:</span> moon</span>
-<span id="cb68-5" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Personalizando o estilo</h2>
-<div class="sourceCode" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb69-1" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span>
-<span id="cb69-2" class="hljs-ln-code"><a href=""></a>format<span class="sc">:</span></span>
-<span id="cb69-3" class="hljs-ln-code"><a href=""></a>  revealjs<span class="sc">:</span> </span>
-<span id="cb69-4" class="hljs-ln-code"><a href=""></a>    theme<span class="sc">:</span> [default, custom.scss]</span>
-<span id="cb69-5" class="hljs-ln-code"><a href=""></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Crie um arquivo <code>custom.scss</code> para adicionar novas regras de estilo por lá.</p>
-<ul>
-<li><p>Nesse arquivo teremos duas secões:</p>
-<ul>
-<li><p><code>/*-- scss:defaults --*/</code> - <a href="https://quarto.org/docs/presentations/revealjs/themes.html#sass-variables">SASS variables</a></p></li>
-<li><p><code>/*-- scss:rules --*/</code> - regras em CSS</p></li>
-</ul></li>
-</ul>
-</section>
-<section class="slide level2">
-<h2>Copie o código de exemplo a seguir:</h2>
-<div class="sourceCode" id="cb70"><pre class="sourceCode numberSource scss number-lines code-with-copy"><code class="sourceCode scss"><span id="cb70-1"><a href=""></a><span class="co">/*-- scss:defaults --*/</span></span>
-<span id="cb70-2"><a href=""></a></span>
-<span id="cb70-3"><a href=""></a><span class="co">// importing fonts</span></span>
-<span id="cb70-4"><a href=""></a><span class="im">@import</span> <span class="fu">url(</span><span class="st">'https://fonts.googleapis.com/css2?family=Montserrat&amp;family=Lato&amp;display=swap'</span><span class="fu">)</span><span class="op">;</span></span>
-<span id="cb70-5"><a href=""></a></span>
-<span id="cb70-6"><a href=""></a><span class="co">// fonts</span></span>
-<span id="cb70-7"><a href=""></a><span class="va">$font-family-sans-serif</span>: <span class="st">'Lato'</span><span class="op">,</span> Tahoma<span class="op">,</span> <span class="dv">sans-serif</span> <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb70-8"><a href=""></a></span>
-<span id="cb70-9"><a href=""></a><span class="co">// headings</span></span>
-<span id="cb70-10"><a href=""></a><span class="va">$presentation-heading-font</span>: <span class="st">'Montserrat'</span><span class="op">,</span>  Tahoma<span class="op">,</span> <span class="dv">sans-serif</span>  <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb70-11"><a href=""></a><span class="va">$presentation-heading-color</span>: <span class="cn">#4c83b6</span> <span class="at">!default</span><span class="op">;</span></span>
-<span id="cb70-12"><a href=""></a></span>
-<span id="cb70-13"><a href=""></a></span>
-<span id="cb70-14"><a href=""></a><span class="va">$body-bg</span>: <span class="cn">#191919</span><span class="op">;</span></span>
-<span id="cb70-15"><a href=""></a><span class="va">$body-color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
-<span id="cb70-16"><a href=""></a><span class="va">$link-color</span>: <span class="cn">#42affa</span><span class="op">;</span></span>
-<span id="cb70-17"><a href=""></a></span>
-<span id="cb70-18"><a href=""></a><span class="co">/*-- scss:rules --*/</span></span>
-<span id="cb70-19"><a href=""></a></span>
-<span id="cb70-20"><a href=""></a></span>
-<span id="cb70-21"><a href=""></a><span class="fu">.slide-logo</span> {</span>
-<span id="cb70-22"><a href=""></a>  <span class="kw">display</span>: <span class="dv">block</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-23"><a href=""></a>  <span class="kw">position</span>: <span class="dv">fixed</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-24"><a href=""></a>  <span class="kw">top</span>: <span class="dv">0</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-25"><a href=""></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-26"><a href=""></a>  <span class="kw">max-height</span>: <span class="dv">15</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-27"><a href=""></a>  <span class="kw">height</span>: <span class="dv">100</span><span class="dt">%</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-28"><a href=""></a>  <span class="kw">width</span>: <span class="bu">auto</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-29"><a href=""></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-30"><a href=""></a>}</span>
-<span id="cb70-31"><a href=""></a></span>
-<span id="cb70-32"><a href=""></a><span class="fu">.slide-number</span><span class="op">,</span> <span class="fu">.reveal.has-logo</span> <span class="fu">.slide-number</span> {</span>
-<span id="cb70-33"><a href=""></a>  <span class="kw">bottom</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-34"><a href=""></a>  <span class="kw">right</span>: <span class="dv">10</span><span class="dt">px</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-35"><a href=""></a>  <span class="kw">top</span>: <span class="bu">unset</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-36"><a href=""></a>  <span class="kw">color</span>: <span class="va">$body-color</span> <span class="at">!important</span><span class="op">;</span></span>
-<span id="cb70-37"><a href=""></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section class="slide level2 center">
-<h2>Vamos praticar!</h2>
-</section></section>
-<section>
-<section class="title-slide slide level1 center">
-<h1>O que mais vocês desejam fazer nos slides?</h1>
-<p><a href="https://quarto.org/docs/presentations/revealjs/demo/index.html#/title-slide">Slide de exemplo</a> e <a href="https://quarto.org/docs/presentations/revealjs/">documentação</a></p>
-</section>
-<section class="slide level2">
-<h2>Onde aprender mais…</h2>
-<ul>
-<li><p><a href="https://quarto.org/docs/gallery/">Documentação do Quarto</a> e a <a href="https://quarto.org/docs/gallery">Galeria</a>.</p></li>
-<li><p><a href="https://www.apreshill.com/blog/2022-04-we-dont-talk-about-quarto/">Não falamos do Quarto</a> <br>Post em inglês por <a href="https://www.apreshill.com/">Alison Hill</a></p></li>
-<li><p><a href="https://www.youtube.com/watch?v=6p4vOKS6Xls&amp;t=67s">Reproducible Authoring with Quarto</a> <br> Apresentação em inglês por <a href="https://mine-cr.com/">Mine Çetinkaya-Rundel</a></p></li>
-<li><p><a href="https://quarto.org/docs/blog/posts/2022-06-21-rstudio-conf-2022-quarto/">Conteúdos sobre o Quarto na RStudio Conf 2022</a></p></li>
-<li><p><a href="https://rstudio-conf-2022.github.io/get-started-quarto/">Workshop Get Started with Quarto</a></p></li>
-<li><p><a href="https://github.com/mcanouil/awesome-quarto">Awesome Quarto</a></p></li>
-</ul>
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>Gabriel Lopes Rubinho - RA 125009 - https://github.com/ghonoz</p>
 </div>
 </div>
-</section></section>
+</section>
     </div>
   </div>
 
@@ -1987,12 +1706,12 @@ Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1</code></pre>
         // flash "checked"
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
-        button.setAttribute("title", "Copied!");
+        button.setAttribute("title", "Copiada");
         let tooltip;
         if (window.bootstrap) {
           button.setAttribute("data-bs-toggle", "tooltip");
           button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
+          button.setAttribute("data-bs-title", "Copiada");
           tooltip = new bootstrap.Tooltip(button, 
             { trigger: "manual", 
               customClass: "code-copy-button-tooltip",
